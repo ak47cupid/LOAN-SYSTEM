@@ -202,13 +202,16 @@ public class Payment {
             System.out.println("4. DELETE PAYMENT RECORD");
             System.out.println("5. EXIT");
             System.out.println("------------------------------------------");
-            System.out.print("Enter Option: ");
-            while (!sc.hasNextInt()) {
-                System.out.println("Invalid Option. Please enter a valid number.");
+            while (true) {
+            System.out.print("Select Option: ");
+            if (sc.hasNextInt()) {
+                opt = sc.nextInt();
+                break; 
+            } else {
+                System.out.println("Invalid input. Please enter a valid number.");
                 sc.next();
-                System.out.print("Enter Option: ");
             }
-            opt = sc.nextInt();
+            }
             
             switch(opt){
                 case 1:
